@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
     center: [9.77137, 46.59182],
     zoom: 14,
     maxZoom: 18,
-    // hash: true,
+    hash: true,
     maxBounds: [9.54, 46.52, 9.97, 46.70],
 });
 
