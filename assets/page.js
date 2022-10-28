@@ -35,7 +35,7 @@ class ShapeAnimator {
         
         this.currentDistance = null;
         
-        this.speedFactor = 5;
+        this.speedFactor = 2;
         this.trackSpeed = 80;
         
         this.trackLength = null;
