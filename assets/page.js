@@ -12,6 +12,8 @@ const map = new mapboxgl.Map({
 
 class ShapeAnimator {
     constructor(map) {
+        this.queryParams = new URLSearchParams(document.location.search);
+
         this.map = map;
         this.layerSourceId = 'vehicle-shape';
         this.animationTick = 50;
@@ -48,7 +50,21 @@ class ShapeAnimator {
                 spaces: [1, 1, 1]
             },
         }
-        this.vehiclesData['capricorn_world_record'] = this.addSpecialVehicle(25, 5, this.vehiclesData['capricorn']);
+        
+        let cars_no = 100;
+        const custom_cars_no = this.queryParams.get('cars_no');
+        if (custom_cars_no) {
+            cars_no = custom_cars_no;
+
+            const carsNoSpan = document.getElementById('carriages_no');
+            carsNoSpan.textContent = cars_no;
+            
+            const customCarsContainer = document.getElementById('custom_cars_container');
+            customCarsContainer.classList.remove('d-none');
+        }
+        const units_no = Math.round(cars_no / 4);
+
+        this.vehiclesData['capricorn_world_record'] = this.addSpecialVehicle(units_no, 5, this.vehiclesData['capricorn']);
 
         this.mapVehiclesCoordsData = {};
 
