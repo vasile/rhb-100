@@ -115,6 +115,12 @@ class ShapeAnimator {
                 map.setPitch(45, {duration: 2000});
             }
         })
+
+        const carsNoSelect = document.getElementById('cars_no_select');
+        carsNoSelect.addEventListener('change', ev => {
+            const url = 'https://vasile.github.io/rhb-100/?cars_no=' + carsNoSelect.value;
+            window.location = url;
+        });
     }
 
     addSpecialVehicle(unitsCount, spaceVehicle, srcVehicleData) {
