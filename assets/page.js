@@ -37,7 +37,7 @@ class ShapeAnimator {
         
         this.currentDistance = null;
         
-        this.speedFactor = 2;
+        this.speedFactor = 1.0;
         this.trackSpeed = 80;
         
         this.trackLength = null;
@@ -93,7 +93,7 @@ class ShapeAnimator {
     addEvents() {
         const speedMultiplySelect = document.getElementById('speed_multiply');
         speedMultiplySelect.addEventListener('change', ev => {
-            this.speedFactor = parseInt(speedMultiplySelect.value, 10);
+            this.speedFactor = parseFloat(speedMultiplySelect.value);
             this.computeIncrementPosition();
         })
 
