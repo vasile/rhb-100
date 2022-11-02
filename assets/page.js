@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidmFzaWxlIiwiYSI6ImNsOXJqbjFrbDBxbTUzbnRmajM1Y
 const map = new mapboxgl.Map({
     container: 'map',
     style: 'https://vectortiles.geo.admin.ch/styles/ch.swisstopo.leichte-basiskarte.vt/style.json',
-    center: [9.77137, 46.59182],
-    zoom: 14,
+    center: [9.760132, 46.596219],
+    zoom: 16,
     maxZoom: 18,
     hash: true,
     maxBounds: [9.54, 46.52, 9.97, 46.70],
