@@ -333,7 +333,9 @@ class ShapeAnimator {
 map.on('load', ev => {
     const shapeAnimator = new ShapeAnimator(map);
     
-    shapeAnimator.animate(7900);
-    // shapeAnimator.animate(12127);
-    // shapeAnimator.animate(8200);
+    // Preda
+    // shapeAnimator.animate(7900);
+
+    // Helical Tunnels
+    shapeAnimator.animate(9700);
 });
